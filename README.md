@@ -7,16 +7,19 @@
 # Proof of Concept
 
 1. A setting is edited within the developer menu, injecting a payload (JavaScript code) into the `ID` field."
-![Payload inyected](https://github.com/Ciber-Mike/BigTree_CMS-Stored_XSS-Developer_Settings/assets/146454370/074a9343-67de-4a2d-b21f-9567f454e51f)
+![Payload inyected](https://github.com/Ciber-Mike/BigTree_CMS-Stored_XSS-Developer_Settings/assets/146454370/bf0b04b7-3ccd-4969-9b4f-34d8a5792998)
+
 
 2. When the user accesses the `/site/index.php/admin/developer/settings` resource, this stored code is executed.
 ![Exploited XSS](https://github.com/Ciber-Mike/BigTree_CMS-Stored_XSS-Developer_Settings/assets/146454370/1528f833-94ab-41c7-a18f-a99758dedaa9)
 
-##Payload:
+## Payload:
 ```js
 <><img src=1 onerror=alert('XSS_Stored_ID')>
 ```
 
 ---
+## References
 https://owasp.org/Top10/es/A03_2021-Injection/
+
 https://owasp.org/www-community/attacks/xss/
